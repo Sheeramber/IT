@@ -1,0 +1,32 @@
+!#/bin/bash
+#Windows to Linux file transfer
+#Windows share is a shared loacation on windows system. 
+#Change or update share location path according to your details.
+Windows_Share: //192.168.2.51/Share_Files 
+echo $Windows_Share
+
+#Windows_Credentials: your windows credentials to access shared location.
+username=administrator
+password=mypassword
+
+#Make mount point in linux. I am using "mnt" to to mount windows folder.
+mountpoint=$(mkdir /mnt/Shared_ubuntu)
+
+echo $mountpoint
+
+#Mount windows shared drive on linux system. source loacation is //192.168.2.51/Share_Files & Destination is /mnt/Shared_ubuntu.
+mount -t cifs -o $username,$password $Windows_Share $mountpoint
+
+
+#Verfy that windows share folder mounted to /mnt/Shared_ubuntu.
+
+df -k
+
+#Auto mount windows shared folder once reboot.
+vi /etc/fstab
+
+#Add the line in below.
+tail_cmd=//192.168.2.51/Files    /mnt/Shared_ubuntu cifs    username=administrator,password=mypassword 0 0
+tail -n 20 $tail_cmd > vi /etc/fstab
+
+exit

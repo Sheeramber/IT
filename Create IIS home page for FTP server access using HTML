@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<table style="width:100%;">
+  <tr>
+    <th> FTP Links for Team</th>
+    <th><h1 style='color:black; font-size:50px'>Welcome to SheerAmber Central Link</h1></th> 
+  </tr>
+  <tr>
+    <td>
+	Click <a href="ftp://SheerAmber-ftp:222">here</a> to go to Basic_Software.
+
+<font size="5"><p>FTP Links for Team as per requirments:</p></font>
+Click <a href="ftp://SheerAmber-ftp:222/traning">here</a> to go to <font size="5">Traning.</font>
+<br>
+Click <a href="ftp://SheerAmber-ftp:222/Photos">here</a> to go to <font size="5">Photos.</font>
+	</td>
+    <td>Smith</td> 
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+  </tr>
+</table>
+
+
+
+
+<center></center>
+
+<font size="6"><p>FTP Links:</p></font>
+
+
+
+<style>
+        body {
+    background: url(Image20190531094159.png) no-repeat 50% 10%;
+    background-size: 30%;
+}
+
+
+
+table{border: 1px solid #ccc; margin-top: 12%;}
+td, th {
+    border: 1px solid #ccc;
+}
+
+td:first-child{width: 20%;}
+
+  
+</style> 
+	
+	
+	
+	</body>
+</html>

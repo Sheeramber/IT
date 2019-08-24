@@ -1,0 +1,44 @@
+#!/bin/bash
+#################################################################
+# #Update all details according to your server details. 	#
+# #DHOST=destination Host					#
+# #DUSER=destination user					#
+# #DPASSWORD=destination password				#
+# #DDate= daily set destination date				#
+# #DDIRECTORY=destination shared directory path.		#
+#################################################################
+
+#Replace ftp.example.com:22 with your server details where you want to paste the data.
+#In my script i am usiing 22 port number, you can update according to your server port number. 
+DHOST=ftp.example.com:22
+
+#Duser & Dpassword is your destination server credentials to login on your destination server.
+DUSER=ftpuser
+DPASSWORD=P@ssw0rd
+
+#Automaticly set current date before copying the data. Its sync with your system date.  
+DDATE=$(date +%d-%m-%Y)
+
+#Select your file path where you want to caopy data.
+DDIRECTORY= \\E:\SeboUbuntu\
+
+# Set your server path where you want to past all copyed data.
+SOURCE= \mnt\backup\
+
+#Connect destination folder
+
+
+#Create directory with the current date for backup
+mkdir $DDIRECTORY $DDATE
+
+#ftp -inv $DHOST <<EOF
+#scp <file> <username>@<IP address or hostname>:<Destination>
+scp -r $SOURCE $DUSER@$DHOST:$mkdir
+
+#user $DUSER $DPASSWORD
+#cd $mkdir
+
+
+#mput *.tar
+bye
+EOF
